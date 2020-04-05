@@ -9,6 +9,9 @@ if os.path.exists("mods"):
     if os.listdir("mods"):
         print("mods directory is not empty, delete or empty")
         quit()
+else:
+    os.mkdir("mods")
+
 
 try:
     with open(manifestlocation, "r") as manifestfile:
