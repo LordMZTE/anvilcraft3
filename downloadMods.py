@@ -1,10 +1,12 @@
 import json
-from urllib import request, parse
+from urllib import request
 import ntpath
 import os
 
 #Constants:
 manifestlocation="src/twitch/manifest.json"
+
+
 if os.path.exists("mods"):
     if os.listdir("mods"):
         print("mods directory is not empty, delete or empty")
