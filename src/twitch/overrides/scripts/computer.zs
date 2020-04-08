@@ -1,3 +1,5 @@
+//LordMZTE: disabled renaming of items
+
 recipes.remove(<advancedrocketry:ic:4>);
 recipes.remove(<advancedrocketry:ic:5>);
 recipes.remove(<advancedrocketry:ic:3>);
@@ -24,7 +26,7 @@ recipes.addShaped(<mekanism:machineblock:8>, [
 
 recipes.removeShaped(<refinedstorage:quartz_enriched_iron> * 4, [[<minecraft:iron_ingot>, <minecraft:iron_ingot>], [<minecraft:iron_ingot>, <minecraft:quartz>]]);
 mods.immersiveengineering.ArcFurnace.addRecipe(<refinedstorage:quartz_enriched_iron>, <lucraftcore:ingot_uru>, <minecraft:gravel>, 2000, 2048, [<gregtech:meta_item_1:10308>, <lucraftcore:nugget_dwarf_star_alloy>, <advancedrocketry:moonturf> * 32]);
-<refinedstorage:quartz_enriched_iron>.displayName = "Alien Alloy";
+//<refinedstorage:quartz_enriched_iron>.displayName = "Alien Alloy";
 
 recipes.addShaped(<star-tech:cosmi_rod>, [
 [<refinedstorage:quartz_enriched_iron>, <tconstruct:hammer_head>.withTag({Material: "dwarfstaralloy"}), <lucraftcore:ingot_gold_titanium_alloy>],
