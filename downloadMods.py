@@ -39,5 +39,5 @@ filecount = len(downloadLinks)
 for link in downloadLinks:
     i += 1
     filename = ntpath.basename(link)
-    request.urlretrieve(link, "mods/" + filename)
+    request.urlretrieve(link.replace(" ", "%20"), "mods/" + filename)
     print("(" + str(i) + "/" + str(filecount) + ") Downloaded " + filename)
