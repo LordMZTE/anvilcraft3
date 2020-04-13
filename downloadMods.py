@@ -29,7 +29,7 @@ filecount = len(manifestobj["files"])
 i = 0
 for file in manifestobj["files"]:
     i += 1
-    with request.urlopen("https://addons-ecs.forgesvc.net/api/v2/addon/" + str(file["projectID"]) + "/file/" + str(file["fileID"]) + "/download-url", timeout=1000) as response:
+    with request.urlopen("https://addons-ecs.forgesvc.net/api/v2/addon/" + str(file["projectID"]) + "/file/" + str(file["fileID"]) + "/download-url", timeout=10000) as response:
         responseLink = response.read().decode("utf-8")
         downloadLinks.append(responseLink)
         print("(" + str(i) + "/" + str(filecount) + ") Got Download Link For " + ntpath.basename(responseLink))
