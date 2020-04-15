@@ -391,7 +391,6 @@
       "required": true
     },
     {
-<<<<<<< HEAD
       "projectID": 268566,
       "fileID": 2835177,
       "required": true
@@ -399,10 +398,6 @@
     {
       "projectID": 223891,
       "fileID": 2526674,
-=======
-      "projectID": 295414,
-      "fileID": 2631741,
->>>>>>> 5a0eff6... Removed Aether and Railcraft
       "required": true
     },
     {
@@ -831,8 +826,13 @@
       "required": true
     },
     {
-      "projectID": 336380,
-      "fileID": 2868940,
+      "projectID": 32274,
+      "fileID": 2916002,
+      "required": true
+    },
+    {
+      "projectID": 295910,
+      "fileID": 2831257,
       "required": true
     },
     {
