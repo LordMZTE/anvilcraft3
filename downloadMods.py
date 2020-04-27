@@ -6,6 +6,14 @@ import os
 #Constants:
 manifestlocation="src/twitch/manifest.json"
 
+def tryGetLink(projectID: str, fileID: str):
+    while(True):
+        url = "https://addons-ecs.forgesvc.net/api/v2/addon/" + projectID + "/file/" + fileID + "/download-url"
+        try:
+            return request.urlopen(url, timeout=10000)
+        except:
+            print("Failed to get Download Link for " + url + " retrying...")
+
 
 if os.path.exists("mods"):
     if os.listdir("mods"):
@@ -29,7 +37,7 @@ filecount = len(manifestobj["files"])
 i = 0
 for file in manifestobj["files"]:
     i += 1
-    with request.urlopen("https://addons-ecs.forgesvc.net/api/v2/addon/" + str(file["projectID"]) + "/file/" + str(file["fileID"]) + "/download-url", timeout=1000) as response:
+    with tryGetLink(str(file["projectID"]), str(file["fileID"])) as response:
         responseLink = response.read().decode("utf-8")
         downloadLinks.append(responseLink)
         print("(" + str(i) + "/" + str(filecount) + ") Got Download Link For " + ntpath.basename(responseLink))
