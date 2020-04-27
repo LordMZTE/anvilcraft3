@@ -1,5 +1,6 @@
 //LordMZTE: disabled renaming of items
 
+#packmode techtree nogreg
 recipes.remove(<advancedrocketry:ic:4>);
 recipes.remove(<advancedrocketry:ic:5>);
 recipes.remove(<advancedrocketry:ic:3>);
